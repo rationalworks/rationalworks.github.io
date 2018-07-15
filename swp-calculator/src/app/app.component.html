@@ -19,37 +19,37 @@
       <div class="row">
         <div class="col-sm-4">
           <label for="defaultFormLoginEmailEx" class="grey-text">Total Amount</label>
-          <input type="email" class="form-control" value="{{initialCapital}}" >
+          <input type="email" class="form-control" [(ngModel)]="initialCapital" >
         </div>
         <div class="col-sm-4">
           <label for="defaultFormLoginEmailEx" class="grey-text">Equity Perentage (%)</label>
-          <input type="email" class="form-control" value="{{equityPerentage}}">
+          <input type="email" class="form-control" [(ngModel)]="equityPerentage">
         </div>
         <div class="col-sm-4">
           <label for="defaultFormLoginEmailEx" class="grey-text">Debt Perentage (%)</label>
-          <input type="email" class="form-control" value="{{debtPercent}}">
+          <input type="email" class="form-control" [(ngModel)]="debtPercent">
         </div>
       </div>
 
       <div class="row">
         <div class="col-sm-4">
           <label for="defaultFormLoginEmailEx" class="grey-text">Increase in Withdrawl (%)</label>
-          <input type="email" class="form-control" value="{{withdrawlIncreasePercent}}">
+          <input type="email" class="form-control" [(ngModel)]="withdrawlIncreasePercent">
         </div>
         <div class="col-sm-4">
           <label for="defaultFormLoginEmailEx" class="grey-text">Equity Growth Perentage (%)</label>
-          <input type="email" class="form-control" value="{{equityGrowthPerentage}}">
+          <input type="email" class="form-control" [(ngModel)]="equityGrowthPerentage">
         </div>
         <div class="col-sm-4">
           <label for="defaultFormLoginEmailEx" class="grey-text">Debt Growth Perentage (%)</label>
-          <input type="email" class="form-control" value="{{debtGrowthPercent}}">
+          <input type="email" class="form-control" [(ngModel)]="debtGrowthPercent">
         </div>
       </div>
 
       <div class="row">
           <div class="col-sm-4">
               <label for="defaultFormLoginEmailEx" class="grey-text">Monthly withdrawl</label>
-              <input type="email" class="form-control"  value="{{initialWithdrawl}}">
+              <input type="email" class="form-control"   [(ngModel)]="initialWithdrawl">
           </div>
           <div class="col-sm-8">
           </div>
@@ -73,31 +73,23 @@
       <table class="table table-hover">
           <thead>
             <tr>
+              <th>S.No</th>
               <th>Year</th>
-              <th>Initial Balence</th>
+              <th>Year Begin Balence</th>
               <th>Withdrawn</th>
-              <th>Intrest</th>
-              <th>Year End Balence</th>
+              <th>Equity Value</th>
+              <th>Debt Value</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr  *ngFor="let yearRecord of tableData; let i=index">
+                  <th scope="row">{{i + 1}}</th>
+                  <td>{{yearRecord.year}}</td>
+                  <td>{{yearRecord.yeb}}</td>
+                  <td>{{yearRecord.withdraw}}</td>
+                  <td>{{yearRecord.eqv}}</td>
+                  <td>{{yearRecord.dv}}</td>
+                </tr>
           </tbody>
         </table>
 
@@ -121,50 +113,11 @@
     <!--Main content end -->
     <div class="col-2"></div>
   </div>
-
-  <div class="row">
-    <div class="col-sm-4">.col-sm-4</div>
-    <div class="col-sm-4">.col-sm-4</div>
-    <div class="col-sm-4">.col-sm-4</div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4">.col-md-4</div>
-    <div class="col-md-4">.col-md-4</div>
-    <div class="col-md-4">.col-md-4</div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4">.col-lg-4</div>
-    <div class="col-lg-4">.col-lg-4</div>
-    <div class="col-lg-4">.col-lg-4</div>
-  </div>
-
-  <div class="row">
-    <div class="col-xl-4">.col-xl-4</div>
-    <div class="col-xl-4">.col-xl-4</div>
-    <div class="col-xl-4">.col-xl-4</div>
-  </div>
 </div>
 
+<div class="dark-font">
 
-
-<!-- Default form login -->
-<form>
-  <p class="h4 text-center mb-12">Sign in</p>
-
-  <!-- Default input email -->
-  <label for="defaultFormLoginEmailEx" class="grey-text">Your email</label>
-  <input type="email" id="defaultFormLoginEmailEx" class="form-control">
-
-  <br>
-
-  <!-- Default input password -->
-  <label for="defaultFormLoginPasswordEx" class="grey-text">Your password</label>
-  <input type="password" id="defaultFormLoginPasswordEx" class="form-control">
-
-  <div class="text-center mt-4">
-    <button class="btn btn-indigo" type="submit">Login</button>
+    <ol class="breadcrumb cyan lighten-4">
+      <li class="breadcrumb-item active">SWP Calculator</li>
+    </ol>
   </div>
-</form>
-<!-- Default form login -->

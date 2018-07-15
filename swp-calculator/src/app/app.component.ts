@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  initialCapital: number = 100000;
+  initialCapital: number = 300000;
   equityPerentage: number = 70;
   debtPercent: number = 30;
-  equityGrowthPerentage: number = 16;
-  debtGrowthPercent: number = 9;
-  initialWithdrawl: number = 1000;
-  withdrawlIncreasePercent: number = 9;
+  equityGrowthPerentage: number = 15;
+  debtGrowthPercent: number = 8;
+  initialWithdrawl: number = 2000;
+  withdrawlIncreasePercent: number = 5;
   currentYear: number = (new Date()).getFullYear();
   maxYearCount: number = 30;
 
@@ -24,6 +24,8 @@ export class AppComponent {
     { data: [], label: 'Total value' }
   ];
 
+  public tableData: Array<any> = [];
+
   public chartLabels: Array<any> = [];
 
   public startSimulation(): void {
@@ -32,28 +34,33 @@ export class AppComponent {
     this.chartDatasets[1].data = [];
     this.chartLabels = [];
 
-    let currentCapital = this.initialCapital ;
-    let currentWithdrawl = this.initialWithdrawl*12;
-    let currentEquityValue = currentCapital * (this.equityPerentage / 100);
-    let currentDebtValue = currentCapital * (this.debtPercent / 100);
-    let currentYearValue = this.currentYear;
+    let currentCapital:number = this.initialCapital ;
+    let currentWithdrawl:number = this.initialWithdrawl*12;
+    let currentEquityValue:number = currentCapital * (this.equityPerentage / 100);
+    let currentDebtValue:number = currentCapital * (this.debtPercent / 100);
+    let currentYearValue:number = this.currentYear;
 
     let itrInterst = 0;
-    while (currentYearValue < (this.currentYear + this.maxYearCount) && (currentEquityValue + currentDebtValue) >= 0) {
+    while (currentYearValue < (this.currentYear + this.maxYearCount) && (currentCapital>0)) {
 
-      this.chartDatasets[0].data.push(currentEquityValue);
-      this.chartDatasets[1].data.push(currentDebtValue);
-      this.chartDatasets[2].data.push(currentCapital);
+      this.chartDatasets[0].data.push(Math.round(currentEquityValue));
+      this.chartDatasets[1].data.push(Math.round(currentDebtValue));
+      this.chartDatasets[2].data.push(Math.round(currentCapital));
       this.chartLabels.push(currentYearValue);
-      
-      console.log("EQV:"+currentEquityValue+" DV:"+currentDebtValue+" WD:"+currentWithdrawl +" Y:"+currentYearValue)
-
+      this.tableData.push({"year":currentYearValue,"eqv":Math.round(currentEquityValue),"dv":Math.round(currentDebtValue),"withdraw":Math.round(currentWithdrawl),"yeb":Math.round(currentCapital)});
+      console.log(this.tableData);
+      console.log("TOT:"+(currentEquityValue+currentDebtValue)+" EQV:"+currentEquityValue+" DV:"+currentDebtValue+" WD:"+currentWithdrawl +" Y:"+currentYearValue)
+      console.log("TOT:"+currentCapital);
       currentWithdrawl = currentWithdrawl +(currentWithdrawl *(this.withdrawlIncreasePercent/100));
       
       currentEquityValue =currentEquityValue -(currentWithdrawl*(this.equityPerentage/100));
       currentDebtValue =currentDebtValue -(currentWithdrawl*(this.debtPercent/100));
+      console.log("EQV -W:"+currentEquityValue+" DV -W:"+currentDebtValue);
+
       currentEquityValue = currentEquityValue + (currentEquityValue * (this.equityGrowthPerentage / 100));
       currentDebtValue = currentDebtValue + (currentDebtValue * (this.debtGrowthPercent / 100));
+
+      console.log("EQV +G:"+currentEquityValue+" DV +G:"+currentDebtValue);
       currentCapital = currentEquityValue +currentDebtValue;
       
 
@@ -93,7 +100,7 @@ export class AppComponent {
   public chartOptions: any = {
     responsive: true
   };
-  //public chartClicked(e: any): void { }
-  //public chartHovered(e: any): void { }
+  public chartClicked(e: any): void { }
+  public chartHovered(e: any): void { }
 
 }

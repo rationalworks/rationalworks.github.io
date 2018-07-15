@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"dark-font\">\r\n\r\n  <ol class=\"breadcrumb cyan lighten-4\">\r\n    <li class=\"breadcrumb-item active\">SWP Calculator</li>\r\n  </ol>\r\n</div>\r\n\r\n<div class=\"container-fluid\">\r\n  <div class=\"row\">\r\n    <div class=\"col-2\"></div>\r\n    <!--Main content begin -->\r\n    <div class=\"col-8\">\r\n      <!-- Input begin -->\r\n      <ol class=\"breadcrumb cyan lighten-4\">\r\n        <li class=\"breadcrumb-item active\">Input</li>\r\n      </ol>\r\n      <!-- Input end -->\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Total Amount</label>\r\n          <input type=\"email\" class=\"form-control\" value=\"{{initialCapital}}\" >\r\n        </div>\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Equity Perentage (%)</label>\r\n          <input type=\"email\" class=\"form-control\" value=\"{{equityPerentage}}\">\r\n        </div>\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Debt Perentage (%)</label>\r\n          <input type=\"email\" class=\"form-control\" value=\"{{debtPercent}}\">\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Increase in Withdrawl (%)</label>\r\n          <input type=\"email\" class=\"form-control\" value=\"{{withdrawlIncreasePercent}}\">\r\n        </div>\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Equity Growth Perentage (%)</label>\r\n          <input type=\"email\" class=\"form-control\" value=\"{{equityGrowthPerentage}}\">\r\n        </div>\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Debt Growth Perentage (%)</label>\r\n          <input type=\"email\" class=\"form-control\" value=\"{{debtGrowthPercent}}\">\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"row\">\r\n          <div class=\"col-sm-4\">\r\n              <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Monthly withdrawl</label>\r\n              <input type=\"email\" class=\"form-control\"  value=\"{{initialWithdrawl}}\">\r\n          </div>\r\n          <div class=\"col-sm-8\">\r\n          </div>\r\n        </div>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-4\">\r\n          <div class=\"text-left\">\r\n            <button class=\"btn btn-indigo\" type=\"submit\" (click)=\"startSimulation()\" >Calculate</button>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-sm-8\">\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Output begin -->\r\n      <ol class=\"breadcrumb cyan lighten-4\">\r\n        <li class=\"breadcrumb-item active\">Results</li>\r\n      </ol>\r\n\r\n      <table class=\"table table-hover\">\r\n          <thead>\r\n            <tr>\r\n              <th>Year</th>\r\n              <th>Initial Balence</th>\r\n              <th>Withdrawn</th>\r\n              <th>Intrest</th>\r\n              <th>Year End Balence</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n            <tr>\r\n              <th scope=\"row\">1</th>\r\n              <td>Mark</td>\r\n              <td>Otto</td>\r\n              <td>@mdo</td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\">2</th>\r\n              <td>Jacob</td>\r\n              <td>Thornton</td>\r\n              <td>@fat</td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\">3</th>\r\n              <td colspan=\"2\">Larry the Bird</td>\r\n              <td>@twitter</td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n\r\n\r\n        <div style=\"display: block\">\r\n            <canvas mdbChart\r\n                [chartType]=\"chartType\"\r\n                [datasets]=\"chartDatasets\"\r\n                [labels]=\"chartLabels\"\r\n                [colors]=\"chartColors\"\r\n                [options]=\"chartOptions\"\r\n                [legend]=\"true\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n        </div>\r\n\r\n      <!-- Output end -->\r\n\r\n    </div>\r\n    <!--Main content end -->\r\n    <div class=\"col-2\"></div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-4\">.col-sm-4</div>\r\n    <div class=\"col-sm-4\">.col-sm-4</div>\r\n    <div class=\"col-sm-4\">.col-sm-4</div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-md-4\">.col-md-4</div>\r\n    <div class=\"col-md-4\">.col-md-4</div>\r\n    <div class=\"col-md-4\">.col-md-4</div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-4\">.col-lg-4</div>\r\n    <div class=\"col-lg-4\">.col-lg-4</div>\r\n    <div class=\"col-lg-4\">.col-lg-4</div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-4\">.col-xl-4</div>\r\n    <div class=\"col-xl-4\">.col-xl-4</div>\r\n    <div class=\"col-xl-4\">.col-xl-4</div>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n<!-- Default form login -->\r\n<form>\r\n  <p class=\"h4 text-center mb-12\">Sign in</p>\r\n\r\n  <!-- Default input email -->\r\n  <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Your email</label>\r\n  <input type=\"email\" id=\"defaultFormLoginEmailEx\" class=\"form-control\">\r\n\r\n  <br>\r\n\r\n  <!-- Default input password -->\r\n  <label for=\"defaultFormLoginPasswordEx\" class=\"grey-text\">Your password</label>\r\n  <input type=\"password\" id=\"defaultFormLoginPasswordEx\" class=\"form-control\">\r\n\r\n  <div class=\"text-center mt-4\">\r\n    <button class=\"btn btn-indigo\" type=\"submit\">Login</button>\r\n  </div>\r\n</form>\r\n<!-- Default form login -->"
+module.exports = "<div class=\"dark-font\">\r\n\r\n  <ol class=\"breadcrumb cyan lighten-4\">\r\n    <li class=\"breadcrumb-item active\">SWP Calculator</li>\r\n  </ol>\r\n</div>\r\n\r\n<div class=\"container-fluid\">\r\n  <div class=\"row\">\r\n    <div class=\"col-2\"></div>\r\n    <!--Main content begin -->\r\n    <div class=\"col-8\">\r\n      <!-- Input begin -->\r\n      <ol class=\"breadcrumb cyan lighten-4\">\r\n        <li class=\"breadcrumb-item active\">Input</li>\r\n      </ol>\r\n      <!-- Input end -->\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Total Amount</label>\r\n          <input type=\"email\" class=\"form-control\" [(ngModel)]=\"initialCapital\" >\r\n        </div>\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Equity Perentage (%)</label>\r\n          <input type=\"email\" class=\"form-control\" [(ngModel)]=\"equityPerentage\">\r\n        </div>\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Debt Perentage (%)</label>\r\n          <input type=\"email\" class=\"form-control\" [(ngModel)]=\"debtPercent\">\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Increase in Withdrawl (%)</label>\r\n          <input type=\"email\" class=\"form-control\" [(ngModel)]=\"withdrawlIncreasePercent\">\r\n        </div>\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Equity Growth Perentage (%)</label>\r\n          <input type=\"email\" class=\"form-control\" [(ngModel)]=\"equityGrowthPerentage\">\r\n        </div>\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Debt Growth Perentage (%)</label>\r\n          <input type=\"email\" class=\"form-control\" [(ngModel)]=\"debtGrowthPercent\">\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"row\">\r\n          <div class=\"col-sm-4\">\r\n              <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Monthly withdrawl</label>\r\n              <input type=\"email\" class=\"form-control\"   [(ngModel)]=\"initialWithdrawl\">\r\n          </div>\r\n          <div class=\"col-sm-8\">\r\n          </div>\r\n        </div>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-4\">\r\n          <div class=\"text-left\">\r\n            <button class=\"btn btn-indigo\" type=\"submit\" (click)=\"startSimulation()\" >Calculate</button>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-sm-8\">\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Output begin -->\r\n      <ol class=\"breadcrumb cyan lighten-4\">\r\n        <li class=\"breadcrumb-item active\">Results</li>\r\n      </ol>\r\n\r\n      <table class=\"table table-hover\">\r\n          <thead>\r\n            <tr>\r\n              <th>S.No</th>\r\n              <th>Year</th>\r\n              <th>Year Begin Balence</th>\r\n              <th>Withdrawn</th>\r\n              <th>Equity Value</th>\r\n              <th>Debt Value</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n              <tr  *ngFor=\"let yearRecord of tableData; let i=index\">\r\n                  <th scope=\"row\">{{i + 1}}</th>\r\n                  <td>{{yearRecord.year}}</td>\r\n                  <td>{{yearRecord.yeb}}</td>\r\n                  <td>{{yearRecord.withdraw}}</td>\r\n                  <td>{{yearRecord.eqv}}</td>\r\n                  <td>{{yearRecord.dv}}</td>\r\n                </tr>\r\n          </tbody>\r\n        </table>\r\n\r\n\r\n        <div style=\"display: block\">\r\n            <canvas mdbChart\r\n                [chartType]=\"chartType\"\r\n                [datasets]=\"chartDatasets\"\r\n                [labels]=\"chartLabels\"\r\n                [colors]=\"chartColors\"\r\n                [options]=\"chartOptions\"\r\n                [legend]=\"true\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n        </div>\r\n\r\n      <!-- Output end -->\r\n\r\n    </div>\r\n    <!--Main content end -->\r\n    <div class=\"col-2\"></div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"dark-font\">\r\n\r\n    <ol class=\"breadcrumb cyan lighten-4\">\r\n      <li class=\"breadcrumb-item active\">SWP Calculator</li>\r\n    </ol>\r\n  </div>"
 
 /***/ }),
 
@@ -66,13 +66,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'app';
-        this.initialCapital = 100000;
+        this.initialCapital = 300000;
         this.equityPerentage = 70;
         this.debtPercent = 30;
-        this.equityGrowthPerentage = 16;
-        this.debtGrowthPercent = 9;
-        this.initialWithdrawl = 1000;
-        this.withdrawlIncreasePercent = 9;
+        this.equityGrowthPerentage = 15;
+        this.debtGrowthPercent = 8;
+        this.initialWithdrawl = 2000;
+        this.withdrawlIncreasePercent = 5;
         this.currentYear = (new Date()).getFullYear();
         this.maxYearCount = 30;
         this.chartDatasets = [
@@ -80,6 +80,7 @@ var AppComponent = /** @class */ (function () {
             { data: [], label: 'Debt' },
             { data: [], label: 'Total value' }
         ];
+        this.tableData = [];
         this.chartLabels = [];
         this.chartType = 'line';
         this.chartColors = [
@@ -105,8 +106,6 @@ var AppComponent = /** @class */ (function () {
         this.chartOptions = {
             responsive: true
         };
-        //public chartClicked(e: any): void { }
-        //public chartHovered(e: any): void { }
     }
     AppComponent.prototype.startSimulation = function () {
         this.chartDatasets[0].data = [];
@@ -118,17 +117,22 @@ var AppComponent = /** @class */ (function () {
         var currentDebtValue = currentCapital * (this.debtPercent / 100);
         var currentYearValue = this.currentYear;
         var itrInterst = 0;
-        while (currentYearValue < (this.currentYear + this.maxYearCount) && (currentEquityValue + currentDebtValue) >= 0) {
-            this.chartDatasets[0].data.push(currentEquityValue);
-            this.chartDatasets[1].data.push(currentDebtValue);
-            this.chartDatasets[2].data.push(currentCapital);
+        while (currentYearValue < (this.currentYear + this.maxYearCount) && (currentCapital > 0)) {
+            this.chartDatasets[0].data.push(Math.round(currentEquityValue));
+            this.chartDatasets[1].data.push(Math.round(currentDebtValue));
+            this.chartDatasets[2].data.push(Math.round(currentCapital));
             this.chartLabels.push(currentYearValue);
-            console.log("EQV:" + currentEquityValue + " DV:" + currentDebtValue + " WD:" + currentWithdrawl + " Y:" + currentYearValue);
+            this.tableData.push({ "year": currentYearValue, "eqv": Math.round(currentEquityValue), "dv": Math.round(currentDebtValue), "withdraw": Math.round(currentWithdrawl), "yeb": Math.round(currentCapital) });
+            console.log(this.tableData);
+            console.log("TOT:" + (currentEquityValue + currentDebtValue) + " EQV:" + currentEquityValue + " DV:" + currentDebtValue + " WD:" + currentWithdrawl + " Y:" + currentYearValue);
+            console.log("TOT:" + currentCapital);
             currentWithdrawl = currentWithdrawl + (currentWithdrawl * (this.withdrawlIncreasePercent / 100));
             currentEquityValue = currentEquityValue - (currentWithdrawl * (this.equityPerentage / 100));
             currentDebtValue = currentDebtValue - (currentWithdrawl * (this.debtPercent / 100));
+            console.log("EQV -W:" + currentEquityValue + " DV -W:" + currentDebtValue);
             currentEquityValue = currentEquityValue + (currentEquityValue * (this.equityGrowthPerentage / 100));
             currentDebtValue = currentDebtValue + (currentDebtValue * (this.debtGrowthPercent / 100));
+            console.log("EQV +G:" + currentEquityValue + " DV +G:" + currentDebtValue);
             currentCapital = currentEquityValue + currentDebtValue;
             currentYearValue++;
         }
@@ -136,6 +140,8 @@ var AppComponent = /** @class */ (function () {
         //console.log(this.chartDatasets[1].data);
         //console.log(this.chartLabels);
     };
+    AppComponent.prototype.chartClicked = function (e) { };
+    AppComponent.prototype.chartHovered = function (e) { };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
