@@ -111,6 +111,7 @@ var AppComponent = /** @class */ (function () {
         this.chartDatasets[0].data = [];
         this.chartDatasets[1].data = [];
         this.chartLabels = [];
+        this.tableData = [];
         var currentCapital = this.initialCapital;
         var currentWithdrawl = this.initialWithdrawl * 12;
         var currentEquityValue = currentCapital * (this.equityPerentage / 100);
@@ -123,7 +124,6 @@ var AppComponent = /** @class */ (function () {
             this.chartDatasets[2].data.push(Math.round(currentCapital));
             this.chartLabels.push(currentYearValue);
             this.tableData.push({ "year": currentYearValue, "eqv": Math.round(currentEquityValue), "dv": Math.round(currentDebtValue), "withdraw": Math.round(currentWithdrawl), "yeb": Math.round(currentCapital) });
-            console.log(this.tableData);
             console.log("TOT:" + (currentEquityValue + currentDebtValue) + " EQV:" + currentEquityValue + " DV:" + currentDebtValue + " WD:" + currentWithdrawl + " Y:" + currentYearValue);
             console.log("TOT:" + currentCapital);
             currentWithdrawl = currentWithdrawl + (currentWithdrawl * (this.withdrawlIncreasePercent / 100));
