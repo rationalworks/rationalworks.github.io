@@ -32,6 +32,7 @@ export class AppComponent {
 
     this.chartDatasets[0].data = [];
     this.chartDatasets[1].data = [];
+    this.chartDatasets[2].data = [];
     this.chartLabels = [];
     this.tableData = [];
 

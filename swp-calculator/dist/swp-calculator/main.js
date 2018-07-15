@@ -110,6 +110,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent.prototype.startSimulation = function () {
         this.chartDatasets[0].data = [];
         this.chartDatasets[1].data = [];
+        this.chartDatasets[2].data = [];
         this.chartLabels = [];
         this.tableData = [];
         var currentCapital = this.initialCapital;
