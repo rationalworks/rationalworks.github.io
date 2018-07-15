@@ -33,6 +33,7 @@ export class AppComponent {
     this.chartDatasets[0].data = [];
     this.chartDatasets[1].data = [];
     this.chartLabels = [];
+    this.tableData = [];
 
     let currentCapital:number = this.initialCapital ;
     let currentWithdrawl:number = this.initialWithdrawl*12;
@@ -48,7 +49,6 @@ export class AppComponent {
       this.chartDatasets[2].data.push(Math.round(currentCapital));
       this.chartLabels.push(currentYearValue);
       this.tableData.push({"year":currentYearValue,"eqv":Math.round(currentEquityValue),"dv":Math.round(currentDebtValue),"withdraw":Math.round(currentWithdrawl),"yeb":Math.round(currentCapital)});
-      console.log(this.tableData);
       console.log("TOT:"+(currentEquityValue+currentDebtValue)+" EQV:"+currentEquityValue+" DV:"+currentDebtValue+" WD:"+currentWithdrawl +" Y:"+currentYearValue)
       console.log("TOT:"+currentCapital);
       currentWithdrawl = currentWithdrawl +(currentWithdrawl *(this.withdrawlIncreasePercent/100));
