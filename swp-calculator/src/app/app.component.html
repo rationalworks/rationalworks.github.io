@@ -1,12 +1,170 @@
-<!-- Start your project here-->
-<div style="height: 100vh">
-  <div class="flex-center flex-column">
-    <h1 class="animated fadeIn mb-4">Material Design for Bootstrap (Angular)</h1>
+<div class="dark-font">
 
-    <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
-    <h6 class="animated fadeIn mb-3">Start browsing <a href="https://mdbootstrap.com/angular">documentation</a>.</h6>
+  <ol class="breadcrumb cyan lighten-4">
+    <li class="breadcrumb-item active">SWP Calculator</li>
+  </ol>
+</div>
 
-    <p class="animated fadeIn text-muted">MDB Team</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2"></div>
+    <!--Main content begin -->
+    <div class="col-8">
+      <!-- Input begin -->
+      <ol class="breadcrumb cyan lighten-4">
+        <li class="breadcrumb-item active">Input</li>
+      </ol>
+      <!-- Input end -->
+
+      <div class="row">
+        <div class="col-sm-4">
+          <label for="defaultFormLoginEmailEx" class="grey-text">Total Amount</label>
+          <input type="email" class="form-control" value="100000">
+        </div>
+        <div class="col-sm-4">
+          <label for="defaultFormLoginEmailEx" class="grey-text">Equity Perentage (%)</label>
+          <input type="email" class="form-control" value="50">
+        </div>
+        <div class="col-sm-4">
+          <label for="defaultFormLoginEmailEx" class="grey-text">Debt Perentage (%)</label>
+          <input type="email" class="form-control" value="50">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <label for="defaultFormLoginEmailEx" class="grey-text">Increase in Withdrawl (%)</label>
+          <input type="email" class="form-control" value="10">
+        </div>
+        <div class="col-sm-4">
+          <label for="defaultFormLoginEmailEx" class="grey-text">Equity Growth Perentage (%)</label>
+          <input type="email" class="form-control" value="15">
+        </div>
+        <div class="col-sm-4">
+          <label for="defaultFormLoginEmailEx" class="grey-text">Debt Growth Perentage (%)</label>
+          <input type="email" class="form-control" value="8">
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-4">
+              <label for="defaultFormLoginEmailEx" class="grey-text">Monthly withdrawl</label>
+              <input type="email" class="form-control" value="1000">
+          </div>
+          <div class="col-sm-8">
+          </div>
+        </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="text-left">
+            <button class="btn btn-indigo" type="submit">Calculate</button>
+          </div>
+        </div>
+        <div class="col-sm-8">
+        </div>
+      </div>
+
+      <!-- Output begin -->
+      <ol class="breadcrumb cyan lighten-4">
+        <li class="breadcrumb-item active">Results</li>
+      </ol>
+
+      <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Initial Balence</th>
+              <th>Withdrawn</th>
+              <th>Intrest</th>
+              <th>Year End Balence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <div style="display: block">
+            <canvas mdbChart
+                [chartType]="chartType"
+                [datasets]="chartDatasets"
+                [labels]="chartLabels"
+                [colors]="chartColors"
+                [options]="chartOptions"
+                [legend]="true"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)">
+            </canvas>
+        </div>
+        
+      <!-- Output end -->
+
+    </div>
+    <!--Main content end -->
+    <div class="col-2"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">.col-sm-4</div>
+    <div class="col-sm-4">.col-sm-4</div>
+    <div class="col-sm-4">.col-sm-4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4">.col-lg-4</div>
+    <div class="col-lg-4">.col-lg-4</div>
+    <div class="col-lg-4">.col-lg-4</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-4">.col-xl-4</div>
+    <div class="col-xl-4">.col-xl-4</div>
+    <div class="col-xl-4">.col-xl-4</div>
   </div>
 </div>
-<!-- /Start your project here-->
+
+
+
+<!-- Default form login -->
+<form>
+  <p class="h4 text-center mb-12">Sign in</p>
+
+  <!-- Default input email -->
+  <label for="defaultFormLoginEmailEx" class="grey-text">Your email</label>
+  <input type="email" id="defaultFormLoginEmailEx" class="form-control">
+
+  <br>
+
+  <!-- Default input password -->
+  <label for="defaultFormLoginPasswordEx" class="grey-text">Your password</label>
+  <input type="password" id="defaultFormLoginPasswordEx" class="form-control">
+
+  <div class="text-center mt-4">
+    <button class="btn btn-indigo" type="submit">Login</button>
+  </div>
+</form>
+<!-- Default form login -->

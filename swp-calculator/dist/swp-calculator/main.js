@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Start your project here-->\n<div style=\"height: 100vh\">\n  <div class=\"flex-center flex-column\">\n    <h1 class=\"animated fadeIn mb-4\">Material Design for Bootstrap (Angular)</h1>\n\n    <h5 class=\"animated fadeIn mb-3\">Thank you for using our product. We're glad you're with us.</h5>\n    <h6 class=\"animated fadeIn mb-3\">Start browsing <a href=\"https://mdbootstrap.com/angular\">documentation</a>.</h6>\n\n    <p class=\"animated fadeIn text-muted\">MDB Team</p>\n  </div>\n</div>\n<!-- /Start your project here-->\n"
+module.exports = "<div class=\"dark-font\">\r\n\r\n  <ol class=\"breadcrumb cyan lighten-4\">\r\n    <li class=\"breadcrumb-item active\">SWP Calculator</li>\r\n  </ol>\r\n</div>\r\n\r\n<div class=\"container-fluid\">\r\n  <div class=\"row\">\r\n    <div class=\"col-2\"></div>\r\n    <!--Main content begin -->\r\n    <div class=\"col-8\">\r\n      <!-- Input begin -->\r\n      <ol class=\"breadcrumb cyan lighten-4\">\r\n        <li class=\"breadcrumb-item active\">Input</li>\r\n      </ol>\r\n      <!-- Input end -->\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Total Amount</label>\r\n          <input type=\"email\" class=\"form-control\" value=\"100000\">\r\n        </div>\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Equity Perentage (%)</label>\r\n          <input type=\"email\" class=\"form-control\" value=\"50\">\r\n        </div>\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Debt Perentage (%)</label>\r\n          <input type=\"email\" class=\"form-control\" value=\"50\">\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Increase in Withdrawl (%)</label>\r\n          <input type=\"email\" class=\"form-control\" value=\"10\">\r\n        </div>\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Equity Growth Perentage (%)</label>\r\n          <input type=\"email\" class=\"form-control\" value=\"15\">\r\n        </div>\r\n        <div class=\"col-sm-4\">\r\n          <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Debt Growth Perentage (%)</label>\r\n          <input type=\"email\" class=\"form-control\" value=\"8\">\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"row\">\r\n          <div class=\"col-sm-4\">\r\n              <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Monthly withdrawl</label>\r\n              <input type=\"email\" class=\"form-control\" value=\"1000\">\r\n          </div>\r\n          <div class=\"col-sm-8\">\r\n          </div>\r\n        </div>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-4\">\r\n          <div class=\"text-left\">\r\n            <button class=\"btn btn-indigo\" type=\"submit\">Calculate</button>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-sm-8\">\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Output begin -->\r\n      <ol class=\"breadcrumb cyan lighten-4\">\r\n        <li class=\"breadcrumb-item active\">Results</li>\r\n      </ol>\r\n\r\n      <table class=\"table table-hover\">\r\n          <thead>\r\n            <tr>\r\n              <th>Year</th>\r\n              <th>Initial Balence</th>\r\n              <th>Withdrawn</th>\r\n              <th>Intrest</th>\r\n              <th>Year End Balence</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n            <tr>\r\n              <th scope=\"row\">1</th>\r\n              <td>Mark</td>\r\n              <td>Otto</td>\r\n              <td>@mdo</td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\">2</th>\r\n              <td>Jacob</td>\r\n              <td>Thornton</td>\r\n              <td>@fat</td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\">3</th>\r\n              <td colspan=\"2\">Larry the Bird</td>\r\n              <td>@twitter</td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n\r\n\r\n        <div style=\"display: block\">\r\n            <canvas mdbChart\r\n                [chartType]=\"chartType\"\r\n                [datasets]=\"chartDatasets\"\r\n                [labels]=\"chartLabels\"\r\n                [colors]=\"chartColors\"\r\n                [options]=\"chartOptions\"\r\n                [legend]=\"true\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n        </div>\r\n        \r\n      <!-- Output end -->\r\n\r\n    </div>\r\n    <!--Main content end -->\r\n    <div class=\"col-2\"></div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-4\">.col-sm-4</div>\r\n    <div class=\"col-sm-4\">.col-sm-4</div>\r\n    <div class=\"col-sm-4\">.col-sm-4</div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-md-4\">.col-md-4</div>\r\n    <div class=\"col-md-4\">.col-md-4</div>\r\n    <div class=\"col-md-4\">.col-md-4</div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-4\">.col-lg-4</div>\r\n    <div class=\"col-lg-4\">.col-lg-4</div>\r\n    <div class=\"col-lg-4\">.col-lg-4</div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-4\">.col-xl-4</div>\r\n    <div class=\"col-xl-4\">.col-xl-4</div>\r\n    <div class=\"col-xl-4\">.col-xl-4</div>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n<!-- Default form login -->\r\n<form>\r\n  <p class=\"h4 text-center mb-12\">Sign in</p>\r\n\r\n  <!-- Default input email -->\r\n  <label for=\"defaultFormLoginEmailEx\" class=\"grey-text\">Your email</label>\r\n  <input type=\"email\" id=\"defaultFormLoginEmailEx\" class=\"form-control\">\r\n\r\n  <br>\r\n\r\n  <!-- Default input password -->\r\n  <label for=\"defaultFormLoginPasswordEx\" class=\"grey-text\">Your password</label>\r\n  <input type=\"password\" id=\"defaultFormLoginPasswordEx\" class=\"form-control\">\r\n\r\n  <div class=\"text-center mt-4\">\r\n    <button class=\"btn btn-indigo\" type=\"submit\">Login</button>\r\n  </div>\r\n</form>\r\n<!-- Default form login -->"
 
 /***/ }),
 
@@ -66,7 +66,38 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'app';
+        this.chartType = 'bar';
+        this.chartDatasets = [
+            { data: [65, 59, 80, 81, 56, 55, 40], label: 'My First dataset' },
+            { data: [28, 48, 40, 19, 86, 27, 90], label: 'My Second dataset' }
+        ];
+        this.chartLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'];
+        this.chartColors = [
+            {
+                backgroundColor: 'rgba(220,220,220,0.2)',
+                borderColor: 'rgba(220,220,220,1)',
+                borderWidth: 2,
+                pointBackgroundColor: 'rgba(220,220,220,1)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgba(220,220,220,1)'
+            },
+            {
+                backgroundColor: 'rgba(151,187,205,0.2)',
+                borderColor: 'rgba(151,187,205,1)',
+                borderWidth: 2,
+                pointBackgroundColor: 'rgba(151,187,205,1)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgba(151,187,205,1)'
+            }
+        ];
+        this.chartOptions = {
+            responsive: true
+        };
     }
+    AppComponent.prototype.chartClicked = function (e) { };
+    AppComponent.prototype.chartHovered = function (e) { };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
