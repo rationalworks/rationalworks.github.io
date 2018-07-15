@@ -44,6 +44,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+angular-bootstrap-md@6.1.6
+MIT
+MIT
+
+font-awesome@4.7.0
+(OFL-1.1 AND MIT)
+(OFL-1.1 AND MIT)
+
 style-loader@0.21.0
 MIT
 Copyright JS Foundation and other contributors
@@ -67,6 +75,10 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+@angular/animations@6.0.9
+MIT
+MIT
+
 @angular/common@6.0.9
 MIT
 MIT
@@ -79,11 +91,19 @@ MIT
 MIT
 MIT
 
+@angular/forms@6.0.9
+MIT
+MIT
+
 @angular/platform-browser-dynamic@6.0.9
 MIT
 MIT
 
 @angular/platform-browser@6.0.9
+MIT
+MIT
+
+@angular/router@6.0.9
 MIT
 MIT
 
