@@ -1,0 +1,105 @@
+<div class="" id="page-wrapper">
+    <div class="container-fluid">
+      <div class="row row-stat">
+        <div class="col-sm-12">
+          <div class="panel panel-default">
+            <div class="panel-heading panel-heading-divider">
+                Getting a house for free - The rich mentality
+                <span class="panel-subtitle">Buying a place of our own is a dream, no metter which part of the work you live in.</span>
+            </div>
+            <div class="panel-body">
+              <div class="xs-mt-10 xs-mb-10  ">
+                <div class="row">
+                  <div class="col-md-8">
+                    <form [formGroup]="houseForm" class="form-horizontal">
+                        <div class="form-group">
+                            <div class="row">
+                              <label class="col-sm-3 control-label">Choose currency</label>
+                              <div class="col-sm-9">
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" formControlName="currency" name="currency" value="doller"> $
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" formControlName="currency" name="currency" value="pound"> £
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" formControlName="currency" name="currency" value="rupee" checked="checked"> ₹
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <label class="col-sm-3 control-label" for="form-control-1">Current price of the House</label>
+                          <div class="col-sm-3">
+                            <input  formControlName="currentCost" type="number">
+                          </div>
+                          <label class="col-sm-3 control-label" for="form-control-1">Loan tenure in years</label>
+                          <div class="col-sm-3">
+                            <input formControlName="loanTenure" type="number">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <label class="col-sm-3 control-label" for="form-control-1">Loan Interest rate %</label>
+                          <div class="col-sm-3">
+                            <input formControlName="loanOnInterestRate" type="number">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <label class="col-sm-3 control-label" for="form-control-1">Expected annual rate of return %</label>
+                          <div class="col-sm-3">
+                            <input formControlName="returnRateOnInvestement" type="number">
+                          </div>
+                          <label class="col-sm-3 control-label" for="form-control-1">Rate of inflation %</label>
+                          <div class="col-sm-3">
+                            <input formControlName="rateOfInflation" type="number">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <label class="col-sm-3 control-label" for="form-control-2"></label>
+                          <div class="col-sm-9">
+                            <p class="xs-mt-10 xs-mb-10">
+                                <button type='button' (click)="analyse()" class="btn btn-space btn-success">Analyse</button>
+                              </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div *ngIf="showAnanlysis" class="form-group">
+                        <div class="row">
+                          <label class="col-sm-3 control-label">Analysis</label>
+                          <div class="col-sm-9">
+                            <p class="form-control-static">With all the deails you are provided. We have determined the following.</p>
+                            <p class="form-control-static">
+                                You need to have {{currency}}{{currentCapitalNeeds | number }} today in order for you to purchase a house
+                                worth {{currency}}{{currentCost | number }}, with a monthly EMI of {{currency}}{{emi*-1 | number}}. 
+                                If you pay the full amount today, at the end of {{loanTenure }} months you will have a house 
+                                worth  {{currency}}{{currentCost | number }} and cash equivalent of {{currency}}{{remainingAmountWithFullPay | number }}.
+                                Since you stil have your original capital [adjusted for inflation] with you after {{loanTenure }} months, 
+                                the house is technically free of cost.
+                                If you instead choose to accept the EMI option, at the end of {{loanTenure}} month you will have
+                                 a house and cash equivalent of {{currency}}{{remainingAmountWithFullEmi | number}}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
