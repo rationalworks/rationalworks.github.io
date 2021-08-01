@@ -311,7 +311,7 @@ function BuyHouseComponent_div_64_Template(rf, ctx) { if (rf & 1) {
 } }
 class BuyHouseComponent {
     constructor() {
-        this.currency = '$';
+        this.currency = '₹';
         this.emi = 0;
         this.inflationAsjustedRequiredCapital = 0;
         this.currentCapitalNeeds = 0;
@@ -375,7 +375,7 @@ BuyHouseComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " Getting a house for free - The rich mentality ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "span", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Buying a place of our own is a dream, no metter which part of the work you live in.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Buying a place of our own is a dream, no matter which part of the work you live in. Here's how you can get it for free.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 7);

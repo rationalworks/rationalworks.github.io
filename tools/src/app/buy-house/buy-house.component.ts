@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class BuyHouseComponent implements OnInit {
 
-  currency ='$';
+  currency ='₹';
   emi = 0;
   inflationAsjustedRequiredCapital = 0;
   currentCapitalNeeds = 0;
