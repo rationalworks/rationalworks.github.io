@@ -15,9 +15,9 @@ body {
 .sidebar {
   z-index: 10;
   position: absolute;
-  width: 220px;
-  padding-top: 10px;
-  height: 100%;
+  width: 20px;
+  //padding-top: 10px;
+  //height: 100%;
   background: #fff;
   border-right: 1px solid #ccc;
   box-shadow: 1px 5px 4px #ccc;
@@ -43,7 +43,7 @@ body {
 }
 #page-wrapper {
     position: inherit;
-    margin: 0 0 0 220px;
+    margin: 0 0 0 0px;
 }
 .container-fluid {
     padding-left: 25px;
