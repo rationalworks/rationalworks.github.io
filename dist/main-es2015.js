@@ -283,7 +283,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function BuyHouseComponent_div_68_p_16_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -298,10 +298,10 @@ function BuyHouseComponent_div_68_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Analysis");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "p", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "p", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "With all the deails you are provided. We have determined the following.");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "p", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "p", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](9, "number");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](10, "number");
@@ -311,7 +311,7 @@ function BuyHouseComponent_div_68_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](14, "number");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](15, "number");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, BuyHouseComponent_div_68_p_16_Template, 2, 1, "p", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, BuyHouseComponent_div_68_p_16_Template, 2, 1, "p", 31);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -392,7 +392,7 @@ class BuyHouseComponent {
     }
 }
 BuyHouseComponent.ɵfac = function BuyHouseComponent_Factory(t) { return new (t || BuyHouseComponent)(); };
-BuyHouseComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BuyHouseComponent, selectors: [["app-buy-house"]], decls: 69, vars: 2, consts: [["id", "page-wrapper", 1, ""], [1, "container-fluid"], [1, "row", "row-stat"], [1, "col-sm-12"], [1, "panel", "panel-default"], [1, "panel-heading", "panel-heading-divider"], [1, "panel-subtitle", "title-description"], [1, "panel-body"], [1, "xs-mt-10", "xs-mb-10"], [1, "row"], [1, "col-md-8"], [1, "form-horizontal", 3, "formGroup"], [1, "form-group"], [1, "col-sm-3", "control-label"], [1, "col-sm-9"], [1, "radio"], ["type", "radio", "formControlName", "currency", "name", "currency", "value", "doller"], ["type", "radio", "formControlName", "currency", "name", "currency", "value", "pound"], ["type", "radio", "formControlName", "currency", "name", "currency", "value", "rupee", "checked", "checked"], ["for", "form-control-1", 1, "col-sm-3", "control-label"], [1, "col-sm-3"], ["formControlName", "currentAvailableFund", "type", "number"], ["formControlName", "currentCost", "type", "number"], ["formControlName", "loanTenure", "type", "number"], ["formControlName", "loanOnInterestRate", "type", "number"], ["formControlName", "returnRateOnInvestement", "type", "number"], ["for", "form-control-2", 1, "col-sm-3", "control-label"], ["type", "button", 1, "btn", "btn-space", "btn-success", 3, "click"], ["class", "form-group", 4, "ngIf"], [1, "form-control-static"], ["class", "form-control-static", 4, "ngIf"]], template: function BuyHouseComponent_Template(rf, ctx) { if (rf & 1) {
+BuyHouseComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BuyHouseComponent, selectors: [["app-buy-house"]], decls: 71, vars: 2, consts: [["id", "page-wrapper", 1, ""], [1, "container-fluid"], [1, "row", "row-stat"], [1, "col-sm-12"], [1, "panel", "panel-default"], [1, "panel-heading", "panel-heading-divider"], [1, "panel-subtitle", "title-description"], [1, "panel-body"], [1, "xs-mt-10", "xs-mb-10"], [1, "row"], [1, "col-md-8"], [1, "form-horizontal", 3, "formGroup"], [1, "form-group"], [1, "col-sm-3", "control-label"], [1, "col-sm-9"], [1, "radio"], ["type", "radio", "formControlName", "currency", "name", "currency", "value", "doller"], ["type", "radio", "formControlName", "currency", "name", "currency", "value", "pound"], ["type", "radio", "formControlName", "currency", "name", "currency", "value", "rupee", "checked", "checked"], ["for", "form-control-1", 1, "col-sm-3", "control-label"], [1, "col-sm-3"], ["formControlName", "currentAvailableFund", "type", "number"], ["formControlName", "currentCost", "type", "number"], ["formControlName", "loanTenure", "type", "number"], ["formControlName", "loanOnInterestRate", "type", "number"], ["formControlName", "returnRateOnInvestement", "type", "number"], ["for", "form-control-2", 1, "col-sm-3", "control-label"], ["type", "button", 1, "btn", "btn-space", "btn-success", 3, "click"], ["class", "form-group", 4, "ngIf"], ["href", "https://visitorshitcounter.com/", "target", "_blank", "title", "Hit counter", "data-name", "951f822928d0d4a7953b85a85506f197|5|page|1|rgb(243, 188, 188);|#ffffff|small|s-hit", 1, "hitCounter"], [1, "form-control-static"], ["class", "form-control-static", 4, "ngIf"]], template: function BuyHouseComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -501,6 +501,9 @@ BuyHouseComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "a", 29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](70, "Hit Counter");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
