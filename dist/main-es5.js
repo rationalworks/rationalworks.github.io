@@ -587,7 +587,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolateV"]([" You need to have ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](9, 17, ctx_r0.currentCapitalNeeds), " (A) today in order for you to purchase a house worth ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](10, 19, ctx_r0.currentCost), ", with a monthly EMI of ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](11, 21, ctx_r0.emi * (0 - 1)), " (E). If you pay the full amount today and invest the remmaining amount, at the end of ", ctx_r0.loanTenure, " months you will have a house worth ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](12, 23, ctx_r0.currentCost), " and cash equivalent to ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](13, 25, ctx_r0.remainingAmountWithFullPay), ". If you instead choose to pay EMI from the amount you have accumulated, at the end of ", ctx_r0.loanTenure, " month you will have a house worth ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](14, 27, ctx_r0.currentCost), " and cash equivalent to ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](15, 29, ctx_r0.remainingAmountWithFullEmi), " [Try increasing aditional amount or loan period, such that remaining amount after paying all EMI is more than the total you you had in the begining (A)]. "]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolateV"]([" You need to have ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](9, 17, ctx_r0.currentCapitalNeeds), " (A) today in order for you to purchase a house worth ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](10, 19, ctx_r0.currentCost), ", with a monthly EMI of ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](11, 21, ctx_r0.emi * (0 - 1)), " (E). If you pay the full amount today and invest the remmaining amount, at the end of ", ctx_r0.loanTenure, " months you will have a house worth ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](12, 23, ctx_r0.currentCost), " and cash equivalent to ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](13, 25, ctx_r0.remainingAmountWithFullPay), ". If you instead choose to pay EMI from the amount you have accumulated, at the end of ", ctx_r0.loanTenure, " month you will have a house worth ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](14, 27, ctx_r0.currentCost), " and cash equivalent to ", ctx_r0.currency, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](15, 29, ctx_r0.remainingAmountWithFullEmi), " [Try changing aditional amount or loan period, such that remaining amount after paying all EMI is more than the total you you had in the begining (A)]. "]);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
 
@@ -628,7 +628,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this2 = this;
 
           this.houseForm.get("currentCost").setValue(3000000);
-          this.houseForm.get("currentAvailableFund").setValue(2500000);
+          this.houseForm.get("currentAvailableFund").setValue(0);
           this.houseForm.get("currency").setValue("rupee");
           this.houseForm.get("loanTenure").setValue(15);
           this.houseForm.get("loanOnInterestRate").setValue(9);
@@ -669,10 +669,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           console.log("Minimum capital required to save loan amount ", minumumRequiredCapitalToSave);
           this.currentCapitalNeeds = additionalAmount + minumumRequiredCapitalToPayEMI + minumumRequiredCapitalToSave;
           console.log("Total capital need is ", this.currentCapitalNeeds);
-          console.log("Availabe fund after full payment", this.currentCapitalNeeds - this.currentCost);
-          this.remainingAmountWithFullPay = Object(financial__WEBPACK_IMPORTED_MODULE_1__["fv"])(returnOnInvestment / 1200, loanTeanure * 12, 0, (additionalAmount + this.currentCapitalNeeds - this.currentCost) * -1);
-          console.log("Remaining fuunds after full payment", additionalAmount + this.remainingAmountWithFullPay);
+          console.log("Availabe fund before full payment", this.currentCapitalNeeds - this.currentCost);
+          this.remainingAmountWithFullPay = Object(financial__WEBPACK_IMPORTED_MODULE_1__["fv"])(returnOnInvestment / 1200, loanTeanure * 12, 0, (this.currentCapitalNeeds - this.currentCost) * -1);
+          console.log("Remaining funds after full payment", this.remainingAmountWithFullPay);
           this.remainingAmountWithFullEmi = Object(financial__WEBPACK_IMPORTED_MODULE_1__["fv"])(returnOnInvestment / 1200, loanTeanure * 12, this.emi * -1, this.currentCapitalNeeds * -1);
+          console.log("Remaining funds after all EMI payment", this.remainingAmountWithFullEmi);
           this.showAnanlysis = true;
         }
       }]);
@@ -712,7 +713,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "br");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " Here's how you do it, gather small sum over a period of time and invest it, let's assume you accumulated an amount of A=(F+P), the price of the house you wish to buy is P, and your monthly EMI is say E, if you start withdrawing E every month from A, it can happen that after you pay the last EMI you still have full amount A remaining. The question here is how big should the amount A be, such that after paying all your EMI you still have A remaining. This kind of purchasing strategy makes the rich even richer.");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " Here's how you do it, gather small sum over a period of time and invest it, let's assume you accumulated an amount of A=(F+ a calculated amount), the price of the house you wish to buy is P, and your monthly EMI is say E, if you start withdrawing E every month from A, it can happen that after you pay the last EMI you still have full amount A remaining. The question here is how big should the amount A be, such that after paying all your EMI you still have A remaining. This kind of purchasing strategy makes the rich even richer.");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 

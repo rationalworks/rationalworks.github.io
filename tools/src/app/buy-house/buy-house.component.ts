@@ -36,7 +36,7 @@ export class BuyHouseComponent implements OnInit {
 
   ngOnInit(): void {
     this.houseForm.get("currentCost").setValue(3000000);
-    this.houseForm.get("currentAvailableFund").setValue(2500000);
+    this.houseForm.get("currentAvailableFund").setValue(0);
     this.houseForm.get("currency").setValue("rupee");
     this.houseForm.get("loanTenure").setValue(15);
     this.houseForm.get("loanOnInterestRate").setValue(9);
@@ -83,10 +83,11 @@ export class BuyHouseComponent implements OnInit {
     this.currentCapitalNeeds = additionalAmount +minumumRequiredCapitalToPayEMI + minumumRequiredCapitalToSave;
     console.log("Total capital need is ",this.currentCapitalNeeds );
 
-    console.log("Availabe fund after full payment" , (this.currentCapitalNeeds-this.currentCost));
-    this.remainingAmountWithFullPay = fv(returnOnInvestment/1200,loanTeanure*12,0,(additionalAmount+this.currentCapitalNeeds -this.currentCost)*-1);
-    console.log("Remaining fuunds after full payment" , additionalAmount+this.remainingAmountWithFullPay );
+    console.log("Availabe fund before full payment" , (this.currentCapitalNeeds-this.currentCost));
+    this.remainingAmountWithFullPay = fv(returnOnInvestment/1200,loanTeanure*12,0,(this.currentCapitalNeeds -this.currentCost)*-1);
+    console.log("Remaining funds after full payment" , this.remainingAmountWithFullPay );
     this.remainingAmountWithFullEmi = fv(returnOnInvestment/1200,loanTeanure*12,this.emi*-1,( this.currentCapitalNeeds)*-1);
+    console.log("Remaining funds after all EMI payment" , this.remainingAmountWithFullEmi );
     this.showAnanlysis = true;
   }
 }
