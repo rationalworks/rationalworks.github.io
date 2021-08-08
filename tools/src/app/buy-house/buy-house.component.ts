@@ -17,6 +17,7 @@ export class BuyHouseComponent implements OnInit {
   loanTenure = 0;
   remainingAmountWithFullPay = 0;
   remainingAmountWithFullEmi = 0;
+  currentAvailableFund = 0;
 
   showAnanlysis = false;
 
@@ -26,7 +27,8 @@ export class BuyHouseComponent implements OnInit {
     loanOnInterestRate: new FormControl(Validators.minLength(2)),
     returnRateOnInvestement: new FormControl(Validators.minLength(2)),
     rateOfInflation: new FormControl(Validators.minLength(2)),
-    currency: new FormControl()
+    currency: new FormControl(),
+    currentAvailableFund: new FormControl()
   });
 
 
@@ -34,10 +36,12 @@ export class BuyHouseComponent implements OnInit {
 
   ngOnInit(): void {
     this.houseForm.get("currentCost").setValue(3000000);
-    this.houseForm.get("loanTenure").setValue(10);
-    this.houseForm.get("loanOnInterestRate").setValue(9.5);
-    this.houseForm.get("returnRateOnInvestement").setValue(12);
-    this.houseForm.get("rateOfInflation").setValue(5);
+    this.houseForm.get("currentAvailableFund").setValue(2500000);
+    this.houseForm.get("currency").setValue("rupee");
+    this.houseForm.get("loanTenure").setValue(15);
+    this.houseForm.get("loanOnInterestRate").setValue(9);
+    this.houseForm.get("returnRateOnInvestement").setValue(10);
+    this.houseForm.get("rateOfInflation").setValue(0);
     this.houseForm.get("currency").setValue("rupee");
     this.houseForm.get("currency").valueChanges.subscribe(newValue => {
       if(newValue == "doller")
@@ -61,19 +65,28 @@ export class BuyHouseComponent implements OnInit {
   {
     console.log("Analysing....");
     let loanAmount = this.houseForm.get("currentCost").value
+    let additionalAmount = this.houseForm.get("currentAvailableFund").value
     let loanInterest = this.houseForm.get("loanOnInterestRate").value;
     let loanTeanure = this.houseForm.get("loanTenure").value;
     let returnOnInvestment = this.houseForm.get("returnRateOnInvestement").value;
     let rateOfInflation = this.houseForm.get("rateOfInflation").value;
-    this.emi = pmt(loanInterest/1200, loanTeanure*12, loanAmount);
-
-    this.inflationAsjustedRequiredCapital = fv(rateOfInflation/1200,loanTeanure*12,0,loanAmount*-1);
-    this.currentCapitalNeeds = pv(loanInterest/1200,loanTeanure*12,this.emi,this.inflationAsjustedRequiredCapital*-1,);
-
     this.currentCost = loanAmount;
     this.loanTenure = loanTeanure *12;
-    this.remainingAmountWithFullPay = fv(returnOnInvestment/1200,loanTeanure*12,0,(this.currentCapitalNeeds-this.currentCost)*-1);
-    this.remainingAmountWithFullEmi = fv(returnOnInvestment/1200,loanTeanure*12,this.emi*-1,(this.currentCapitalNeeds)*-1);
+    this.emi = pmt(loanInterest/1200, loanTeanure*12, loanAmount);
+    console.log("EMI is ",this.emi*-1 );
+    let minumumRequiredCapitalToPayEMI = Math.max(pv(returnOnInvestment/1200,loanTeanure*12,this.emi*-1,0,), loanAmount);
+    console.log("Minimum capital required to pay EMI is ",minumumRequiredCapitalToPayEMI );
+    
+    let minumumRequiredCapitalToSave = pv(returnOnInvestment/1200,loanTeanure*12,0,loanAmount)*-1;
+    console.log("Minimum capital required to save loan amount ",minumumRequiredCapitalToSave );
+
+    this.currentCapitalNeeds = additionalAmount +minumumRequiredCapitalToPayEMI + minumumRequiredCapitalToSave;
+    console.log("Total capital need is ",this.currentCapitalNeeds );
+
+    console.log("Availabe fund after full payment" , (this.currentCapitalNeeds-this.currentCost));
+    this.remainingAmountWithFullPay = fv(returnOnInvestment/1200,loanTeanure*12,0,(additionalAmount+this.currentCapitalNeeds -this.currentCost)*-1);
+    console.log("Remaining fuunds after full payment" , additionalAmount+this.remainingAmountWithFullPay );
+    this.remainingAmountWithFullEmi = fv(returnOnInvestment/1200,loanTeanure*12,this.emi*-1,( this.currentCapitalNeeds)*-1);
     this.showAnanlysis = true;
   }
 }
